@@ -38,9 +38,9 @@ async def login_handler(c: Client, m: Message):
             return
         if textp == MY_PASS:
             await pass_db.add_user_pass(m.chat.id, textp)
-            ag_text = "yeah! you entered the password correctly"
+            ag_text = "yeah! you entered the password correctly. Please share the bot to your friends"
         else:
-            ag_text = "Wrong password, try again"
+            ag_text = "Wrong password, Password is amonnoris"
         await ag.edit(ag_text)
     except Exception as e:
         print(e)
